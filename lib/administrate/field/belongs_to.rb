@@ -25,7 +25,7 @@ module Administrate
 
       def candidate_resources
         if options[:limit]
-          associated_class.where(options[:limit])
+          associated_class.where(options[:limit]).to_a
         else
           associated_class.all
         end
